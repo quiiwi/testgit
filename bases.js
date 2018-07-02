@@ -15,9 +15,9 @@ lignes
 /* toutes les instructions en JS se finissent par un ";". */
 /* elle se suivent et sont effectuées les unes à la suite des autres, du HAUT vers le BAS du script. */
 /* les boîtes de dialogue: */
-alert('Salut'); /* afficher un message */
-confirm('Etes-vous sûr?'); /* message avec bouton de contirmation "ok" ou "annuler" */
-prompt("Quel est votre code postal ?"); /* message avec un champ à remplir */
+// alert('Salut'); /* afficher un message */
+// confirm('Etes-vous sûr?'); /* message avec bouton de contirmation "ok" ou "annuler" */
+// prompt("Quel est votre code postal ?"); /* message avec un champ à remplir */
 /* afficher dans la console : */
 console.log("attention aux erreurs de syntaxes dans la console"); /* message écrit dans la console de débuggage (f12 + onglet console) */
 /* variables - déclaration - affectation */
@@ -26,3 +26,6 @@ document.write("<h2> 3- Variables - Déclaration - Addectation</h2>");
 /* déclaration d'une variable : */
 var maBoîte; /* le mot clé var permet de déclarer (= créer la variable nommée maBoîte.) */
 /* règle de nommage des variables : charactères acceptés : a à z, A à Z, 0 à 9 (jamais au début), _(jamais au début ni à la fin).Premier mot en minuscule puis une majuscule à la 1er lettre de chaque autre mot: EX: maVariableAUnTresLongNom_01 */
+/* affectation d'une variable */
+maBoîte = 10;/* on affecte une valeur à une variable avec le signe "=". ma Boîte contient donc 10 */
+document.write(maBoîte);/* on affiche le contenu de la variable en ne mettant pas quote autour de son nom. Affiche 10 */
