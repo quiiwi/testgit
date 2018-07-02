@@ -120,3 +120,31 @@ chiffre3 = chiffre3 + 5; /* le résultat vaut 15 */
 chiffre3 = chiffre3 + 5 /* le résultat vaut 20 mais cette syntaxe n'est pas conventionnellle. On utilise la syntaxe suivante : */
 chiffre3 += 5; /* cette syntaxe fait la même chose que la précédente, mais c'est elle que l'on retiendra. chiffre3 vaut ici 25 */
 
+/* fonctionne avec tous les opérateurs : +=, -=, *=, /= et %= */
+
+/* Incrémenter et décrémenter : */
+var i = 0;
+i++; /* incrémenter i de +1, i vaut donc 1 */
+i--; /* décrémenter i de -1, i vaut donc 0 */
+/* i++ peut aussi s'écrire ++i à la différence près : i++ retourne la valeur de i AVANT d'effectuer l'opération, ++i retourne la valeur de i APRES avoir effectué l'opération*/
+var x = 5;
+var y = x++;/* y prend la valeur de 5 PUIS x passe à 6 */
+
+document.write('y vaut ' + y + "<br>");/* 5 */
+document.write('x vaut ' + x + "<br>" + "<hr>"); /* 6 */
+
+x = 5;
+var z = ++x; /* x passe à 6 PUIS z prend la valeur de 6 */
+document.write('y vaut ' + z + "<br>");/* 5 */
+document.write('x vaut ' + x + "<br>" + "<hr>"); /* 6 */
+
+/* Exercice : */
+/*  L'internaute a achté 0.8kg de pomme et 0.7kg de poires.
+vous déclarez 4 variables, une qui contient "pommes", une qui contient "poires", une qui contient le poids des pommes et une qui contient le poids des poires.
+puis vous affichez la phrases "Vous avez acheté des pommes et des poires pour un poids total de 1.5 kg" où les fruits et le poids total sont remplacés par les variables. */
+var pommes, poires, poidsDesPommes, poidsDesPoires;
+fruit1 = " Pommes ";
+fruit2 = " Poires ";
+poids1 = 0.8;
+poids2 = 0.7;
+document.write("Vous avez acheté des :"+ fruit1 + "et des" + fruit2 + "pour un poids total de : " + (poids1 + poids2) + " kg");
