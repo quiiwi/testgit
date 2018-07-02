@@ -22,3 +22,4 @@ prompt("Quel est votre code postal ?"); /* message avec un champ à remplir */
 console.log("attention aux erreurs de syntaxes dans la console"); /* message écrit dans la console de débuggage (f12 + onglet console) */
 /* variables - déclaration - affectation */
 document.write("<h2> 3- Variables - Déclaration - Addectation</h2>");
+/* Définition : une variable est un espace mémoire nommé dans lequel nous allons stocker une donnée, une valeur. Cette donnée peut être de n'importe quel type/ chiffre, chaîne de caractères, balise HTML, etc. */
