@@ -108,4 +108,15 @@ resultat = 10+5;/* addition */
 resultat = 10-5; /* soustraction */
 resultat = 10*5; /* multiplication */
 resultat = 10/5; /* division */
-resultat = 10%5; /* modulo = reste de la division entière. Si j'ai 3 billes réparties sur 2 personnes, il m'en reste 1 seule : 3%2 vaut donc 1 (modulo de 2 pour vérifier si un chiffre est pair ou impaire, modulo de 10 si c'est une dizaine, ....) */
+resultat = 3%2; /* modulo = reste de la division entière. Si j'ai 3 billes réparties sur 2 personnes, il m'en reste 1 seule : 3%2 vaut donc 1 (modulo de 2 pour vérifier si un chiffre est pair ou impaire, modulo de 10 si c'est une dizaine, ....) */
+
+/* on peut appliquer les opérateurs aux variables : */
+var chiffre1 = 10,
+    chiffre2 = 5;
+resultat = chiffre1 + chiffre2; /* résultat vaut 15 */
+
+var chiffre3 = 10;
+chiffre3 = chiffre3 + 5; /* le résultat vaut 15 */
+chiffre3 = chiffre3 + 5 /* le résultat vaut 20 mais cette syntaxe n'est pas conventionnellle. On utilise la syntaxe suivante : */
+chiffre3 += 5; /* cette syntaxe fait la même chose que la précédente, mais c'est elle que l'on retiendra. chiffre3 vaut ici 25 */
+
