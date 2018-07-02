@@ -43,5 +43,11 @@ document.write("<br>");
 prenom = "Pierre";/* nous changeons la valeur initial "Sylvie" pour la remplacer par "Pierre" */
 document.write(prenom);/* affiche pierre */
 document.write("<br>");
-prenom = nom;/* nous changeons la valeur initial "Pierre" pour la remplacer par "Robert" */
+prenom = nom;/* nous affectons la valeur de la variable nom à la variable prenom autrement on replace "Pierre" par "Robert" */
 document.write(prenom);/* affiche robert */
+document.write("<br>");
+/* ajouter une valeur à la valeur déjà existante d'une variable : */
+var fruit = "pomme";
+fruit += "fraise";/* on ajoute la chaîne de charactères "fraise" à "pomme" déjà existante dans la variable fruit avec l'opérateur += (sans espace) */
+document.write(fruit);/* affiche la variable fruit */
+document.write("<br>");
