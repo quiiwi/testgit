@@ -8,7 +8,7 @@ lignes
 
 // commentaire sur toute la ligne
 
-// /* 2 affichage */
+/* 2 affichage */
 // document.write("mon premier message");
 // document.write("<h1>Les bases de JAVASCRIPT</h1>");
 /* on peut mettre des balises HTML, elle sont interprétées et donc insérées dans le HTML */
@@ -27,7 +27,14 @@ document.write("<h2> 3- Variables - Déclaration - Addectation</h2>");
 var maBoîte; /* le mot clé var permet de déclarer (= créer la variable nommée maBoîte.) */
 /* règle de nommage des variables : charactères acceptés : a à z, A à Z, 0 à 9 (jamais au début), _(jamais au début ni à la fin).Premier mot en minuscule puis une majuscule à la 1er lettre de chaque autre mot: EX: maVariableAUnTresLongNom_01 */
 /* affectation d'une variable */
-maBoîte = 10;/* on affecte une valeur à une variable avec le signe "=". ma Boîte contient donc 10 */
-document.write(maBoîte);/* on affiche le contenu de la variable en ne mettant pas quote autour de son nom. Affiche 10 */
-var maBoîte = 10; /* on peut déclarer et affecter une variable en même temps (bous retiendrons cette écriture) */
-monAutreBoîte = "Bonjour";/* cette écriture est possible (déclaration san le mot clé var), mais ce n'est âs conventionnel. De plus, dans une fonction cela n'a pas la même signification (voir chapitre "portée des variables"). */
+maBoite = 10;/* on affecte une valeur à une variable avec le signe "=". maBoite contient donc 10 */
+document.write(maBoite);/* on affiche le contenu de la variable en ne mettant pas quote autour de son nom. Affiche 10 */
+var maBoite = 10; /* on peut déclarer et affecter une variable en même temps (bous retiendrons cette écriture) */
+monAutreBoite = "Bonjour";/* cette écriture est possible (déclaration san le mot clé var), mais ce n'est âs conventionnel. De plus, dans une fonction cela n'a pas la même signification (voir chapitre "portée des variables"). */
+document.write("<br>");
+/* déclarer et affecter plusieurs variables en même temps : */
+var prenom = "Sylvie",
+    nom = "Robert",
+    genre = "féminin";/* un seul var pour les déclarer tous... */
+
+document.write(prenom);
