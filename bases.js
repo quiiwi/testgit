@@ -20,3 +20,5 @@ confirm('Etes-vous sûr?'); /* message avec bouton de contirmation "ok" ou "annu
 prompt("Quel est votre code postal ?"); /* message avec un champ à remplir */
 /* afficher dans la console : */
 console.log("attention aux erreurs de syntaxes dans la console"); /* message écrit dans la console de débuggage (f12 + onglet console) */
+/* variables - déclaration - affectation */
+document.write("<h2> 3- Variables - Déclaration - Addectation</h2>");
