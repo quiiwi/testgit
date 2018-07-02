@@ -29,3 +29,5 @@ var maBoîte; /* le mot clé var permet de déclarer (= créer la variable nomm�
 /* affectation d'une variable */
 maBoîte = 10;/* on affecte une valeur à une variable avec le signe "=". ma Boîte contient donc 10 */
 document.write(maBoîte);/* on affiche le contenu de la variable en ne mettant pas quote autour de son nom. Affiche 10 */
+var maBoîte = 10; /* on peut déclarer et affecter une variable en même temps (bous retiendrons cette écriture) */
+monAutreBoîte = "Bonjour";/* cette écriture est possible (déclaration san le mot clé var), mais ce n'est âs conventionnel. De plus, dans une fonction cela n'a pas la même signification (voir chapitre "portée des variables"). */
