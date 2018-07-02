@@ -9,8 +9,8 @@ lignes
 // commentaire sur toute la ligne
 
 /* 2 affichage */
-// document.write("mon premier message");
-// document.write("<h1>Les bases de JAVASCRIPT</h1>");
+document.write("mon premier message");
+document.write("<h1>Les bases de JAVASCRIPT</h1>");
 /* on peut mettre des balises HTML, elle sont interprétées et donc insérées dans le HTML */
 /* toutes les instructions en JS se finissent par un ";". */
 /* elle se suivent et sont effectuées les unes à la suite des autres, du HAUT vers le BAS du script. */
@@ -147,3 +147,73 @@ fruit2 = " Poires ",
 poids1 = 0.8,
 poids2 = 0.7;
 document.write("Vous avez acheté des :"+ fruit1 + "et des" + fruit2 + "pour un poids total de : " + (poids1 + poids2) + " kg");
+
+/* Conditions */
+document.write("<h2> Conditions </h2>");
+var a = 10,
+    b = 5,
+    c = 2;
+
+/* La codition if / else */
+if (a > b){
+    /* si la condition est évaluée à true, on entre dans les accolades qui suivent : */
+    document.write("a est suppérieur à b <br>");
+} else{
+    /* sinon... si la condition est évaluée à false, on exécute le else : */
+    document.write("b est supérieur ou égal à a <br>");
+}
+
+/* if avec AND : */
+if (a > b && b > c){
+    /* Si a est supérieur à b ET que dans le même temps b est supérieur à c, on entre dans les accolades qui suivent */
+    document.write("Ok pour les 2 conditions <br>")
+}
+
+/* if avec OR : */
+if ( a == 9 || b > c ){
+    /* si a est égal (==) à 9 OU alors que b est supérieur à c, on entre dans les accolades qui suivent : */
+    document.write("Ok pour au moins une des deux conditions <br>");
+}
+
+/* if elseif else */
+if (a == 8){
+    /* si a vaut 8, on exécute ce qui suit */
+    document.write("a est égal à 8 <br>");
+}else if( a != 10){
+    /* sinon si a est different de 10, on exécute ce qui suit */
+    document.write("a est different de 10 <br>");
+}else{
+/* sinon, c'est que je ne suis tombé ni dans le if, ni dans le elseif, je me trouve donc dans ce else */
+    document.write("les 2 conditions sont fasses <br>");
+}
+
+/* notes: jamais de () après un else. le else n'est pas obligatoire s'il est vide. En revanche, après un if il y a toujours une condition */
+
+/* l'opérateur NOT : */
+/* l'opérateur NOT qui s'écrit "!" permet d'inverser quelque chose de TRUE en FALSE, ou quelquechose de FALSE en TRUE. Il s'agit d'une négation. */
+
+var test = 3 < 1;
+console.log("test vaut : " + test); /* pour vérifier que test vaut false */
+if (!test){
+    /* le "!" es une négation qui inverse le sens du booléen : test seul valant false, !test vaut dpnc true. La condition finale étant donc évaluée à true, on entre dans les accolades: */
+    document.write("On exécute ce code.... <br>");  
+}
+/* conclusion : les instructions d'une condition seront toujours exécutées qui si la condition renvoie TRUE. */
+
+/* la comparaison avec le triple "===" */
+var varA = 1,/* number */
+    varB = "1";/* string */
+
+if( varA == varB){
+    /* varA et varB valent tous les deux 1 en valeur : la condition avec "==" est donc vraie. on execute les accolades qui suivent : */
+    document.write("Egalité en valeur uniquement <br>");
+} else{
+    document.write("Différence en valeur uniquement <br>");
+}
+
+if( varA === varB){
+    /* varA et varB valent tous les deux 1 en valeur mais sont 2 types differents : donc la condition est fausse */
+    document.write("Egalité en valeur ET en type <br>");
+} else{
+    document.write("Différence en valeur OU en type <br>");
+}
