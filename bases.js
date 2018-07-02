@@ -55,3 +55,20 @@ document.write("<br>");
 /* utiliser prompt avec une variable : */
 // var codePostale = prompt("Quel est votre code postal?");
 // document.write(codePostale);
+
+/* types de données */
+document.write("<h2> types de données </h2>");
+/* nous commençons par les 3 principaux types de données dits primitifs */
+/* les types numériques appelés NUMBER */
+var chiffre = 20; /* les numbers s'écrivent sans quotes ni guillemets */
+/* tous les types numériques sont possibles : entiers, décimaux, positifs, négatifs... */
+/* les types chaînes de caractères appelés STRING */
+var text = "kilic";
+var apostrophe ='il faut utiliser le caractère d\'échappement pour les apostrophes dans des quotes';/* alt gr+ 8 pour le caractère d'échappement */
+/* Les quotes ou les guillements indiquent qu'il s'agit du type STRING */
+var numera = "10"; ///* un chiffre dans des quotes ou des guillements est interprété comme une STRING */
+
+/* le type booléen (ou boolean en anglais) */
+/* le type booléen ne prend que 2 valeurs : true ou false */
+var choix = true; /* s'écrit sans quote */
+
