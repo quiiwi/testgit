@@ -108,4 +108,4 @@ resultat = 10+5;/* addition */
 resultat = 10-5; /* soustraction */
 resultat = 10*5; /* multiplication */
 resultat = 10/5; /* division */
-resultat = 10%5; /* modulo */
+resultat = 10%5; /* modulo = reste de la division entière. Si j'ai 3 billes réparties sur 2 personnes, il m'en reste 1 seule : 3%2 vaut donc 1 (modulo de 2 pour vérifier si un chiffre est pair ou impaire, modulo de 10 si c'est une dizaine, ....) */
