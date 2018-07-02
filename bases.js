@@ -18,3 +18,4 @@ document.write("<h1>Les bases de JAVASCRIPT</h1>");
 alert('Salut'); /* afficher un message */
 confirm('Etes-vous sûr?'); /* message avec bouton de contirmation "ok" ou "annuler" */
 prompt("Quel est votre code postal ?"); /* message avec un champ à remplir */
+/* afficher dans la console : */
