@@ -142,9 +142,8 @@ document.write('x vaut ' + x + "<br>" + "<hr>"); /* 6 */
 /*  L'internaute a achté 0.8kg de pomme et 0.7kg de poires.
 vous déclarez 4 variables, une qui contient "pommes", une qui contient "poires", une qui contient le poids des pommes et une qui contient le poids des poires.
 puis vous affichez la phrases "Vous avez acheté des pommes et des poires pour un poids total de 1.5 kg" où les fruits et le poids total sont remplacés par les variables. */
-var pommes, poires, poidsDesPommes, poidsDesPoires;
-fruit1 = " Pommes ";
-fruit2 = " Poires ";
-poids1 = 0.8;
+var fruit1 = " Pommes ",
+fruit2 = " Poires ",
+poids1 = 0.8,
 poids2 = 0.7;
 document.write("Vous avez acheté des :"+ fruit1 + "et des" + fruit2 + "pour un poids total de : " + (poids1 + poids2) + " kg");
