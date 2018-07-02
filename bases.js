@@ -51,3 +51,7 @@ var fruit = "pomme";
 fruit += "fraise";/* on ajoute la chaîne de charactères "fraise" à "pomme" déjà existante dans la variable fruit avec l'opérateur += (sans espace) */
 document.write(fruit);/* affiche la variable fruit */
 document.write("<br>");
+
+/* utiliser prompt avec une variable : */
+// var codePostale = prompt("Quel est votre code postal?");
+// document.write(codePostale);
