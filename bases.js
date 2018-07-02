@@ -66,9 +66,46 @@ var chiffre = 20; /* les numbers s'écrivent sans quotes ni guillemets */
 var text = "kilic";
 var apostrophe ='il faut utiliser le caractère d\'échappement pour les apostrophes dans des quotes';/* alt gr+ 8 pour le caractère d'échappement */
 /* Les quotes ou les guillements indiquent qu'il s'agit du type STRING */
-var numera = "10"; ///* un chiffre dans des quotes ou des guillements est interprété comme une STRING */
+var numero = "10"; ///* un chiffre dans des quotes ou des guillements est interprété comme une STRING */
 
 /* le type booléen (ou boolean en anglais) */
 /* le type booléen ne prend que 2 valeurs : true ou false */
 var choix = true; /* s'écrit sans quote */
 
+/* typeof permet de vérifier le type d'une variable */
+document.write(typeof(chiffre)); //number
+document.write("<br>");
+
+document.write(typeof(text)); //string
+document.write("<br>");
+
+document.write(typeof(numero)); //string
+document.write("<br>");
+
+document.write(typeof(choix)); //boolean
+document.write("<br>");
+
+/* constante */
+document.write("<h2>Constante</h2>");
+/* définition : les constantes sont comme des variables dont la valeur ne peut pas être modifiée. Elles permettent de "protégér" cette valeur nécessaire au bon fonctionnement du script. */
+const CHANGE_PAS = 'ma constante impossible à modifier';/* par convention entre développeurs on écrit les constantes en majuscules et avec un "_" si besoin. */
+document.write(CHANGE_PAS);/* affiche le contenue de la constante */
+document.write("<br>");
+/* CHANGE_PAS = 'autre valeur'; */ /* erreur bloquante de type invalid assignment to const CHANGE_PAS */
+
+/* concaténation */
+document.write("<h2> Concaténation </h2>");
+/* En JS, o fait suive des variables et des string avec le symbole "+". on parle de concaténation */
+var prenom = "Bruce",
+    nom = "Wayne";
+document.write(prenom + " " + nom + " " + "est BATMAN" +"<br>"); /* concatène la variable prenom avec un espace avec la variable nom avec un espace avec un  string "est BATMAN" et enfin une balise <br> */
+var personnage = (prenom + " " + nom + " " + "est un personnage" +"<br>");
+document.write(personnage);
+/* opérateurs arithmétiques */
+document.write("<h2> Opérateur arthmétiques </h2>");
+var resultat;
+resultat = 10+5;/* addition */
+resultat = 10-5; /* soustraction */
+resultat = 10*5; /* multiplication */
+resultat = 10/5; /* division */
+resultat = 10%5; /* modulo */
