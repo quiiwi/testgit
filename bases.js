@@ -37,4 +37,11 @@ var prenom = "Sylvie",
     nom = "Robert",
     genre = "féminin";/* un seul var pour les déclarer tous... */
 
-document.write(prenom);
+document.write(prenom);/* affiche sylvie */
+document.write("<br>");
+/* changer la valeur d'une variable : */
+prenom = "Pierre";/* nous changeons la valeur initial "Sylvie" pour la remplacer par "Pierre" */
+document.write(prenom);/* affiche pierre */
+document.write("<br>");
+prenom = nom;/* nous changeons la valeur initial "Pierre" pour la remplacer par "Robert" */
+document.write(prenom);/* affiche robert */
