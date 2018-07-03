@@ -529,3 +529,24 @@ var maFonction2 = function (){
 // Pour qu'une fonction s'exécute, il fait l'appeler :
 maFonction(); //on appelle une foction en écrivant son nom suivi d'un paire de parenthèses
 maFonction2(); //en appelant cette fonction, j'éxécute le code qui s'y trouve
+
+// par convention nous déclarons toujours une fonction avant de l'exécuter.
+
+// -------------
+// Fonctions avec paramètres :
+function direBonjour(prenom, nom){/* prenom et nom sont des paramètres de la fonction séoarés par une "," et qui attendent une valeur */
+    document.write('<p> Bonjour ' + prenom + ' ' + nom + ", comment allez-vous ?" + '</p>');
+}
+
+direBonjour("Alice", "Dupon"); /* la valeur "alice" qui est en première position va être affectée au paramètre prenom, et la valeur "Dupon" (en seconde position) va être affectée au paramètrenom. ainsi la fonction direBonjour peut afficher un message personnalisé. */
+
+// ------------
+
+function d(param){
+    document.write( param + "<hr>");
+}
+
+d("test de notre fonction");
+d("yolo");
+d(4+2);
+d('<div class="test">Test de notre fonction</div>');
