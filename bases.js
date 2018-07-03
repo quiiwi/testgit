@@ -268,7 +268,7 @@ Si la réponse est correcte, on affiche "Vous avez indiqué avoir X and." ou X e
 */
 var annee = 2018
 
-var ageDeL_Utilisateur = prompt("Vous avez quel âge ?");
+var ageDeL_Utilisateur =  1/* prompt("Vous avez quel âge ?"); */
 
 if (ageDeL_Utilisateur == ''  ){
 
@@ -280,7 +280,7 @@ if (ageDeL_Utilisateur == ''  ){
 
 } else {
 
-    document.write("Vous êtes née en " + (ageDeL_Utilisateur - annee));
+    document.write("Vous êtes née en " + (annee - ageDeL_Utilisateur));
 
 }
 
@@ -324,3 +324,55 @@ document.write("<h2> Synthèse des opérateurs </h2>");
         !FALSE => true
 
 */
+
+// ----------------
+// 10- condition switch
+// ----------------
+document.write("<h2> Condition switch </h2>");
+
+// La condition switch est une autre syntaxe pour écrire une condition if... elseif... else, lorsque l'on veut comparer une variable à une multitude de valeurs.
+
+var couleur = "jaune";
+
+switch (couleur){
+    case "bleu" :/* chaque case représente une valeur que peut prendre la variable. Si couleur contient "bleu", on exécute le code qui suit ce case : */
+        document.write("Vous aimez le bleu <br>");
+    break;/* obligatoire pour quitter la condition une fois le case exécuté. */
+
+    case "rouge" :
+        document.write("Vous aimez le rouge <br>");
+    break;
+
+    case "vert" :
+        document.write("Vous aimez le vert <br>");
+    break;
+
+    default:/* on tombe dans default (par défaut) si on entre dans aucun case précédent. */
+        document.write("Vous n'aimez aucune de ces couleurs <br>");
+    break;
+}
+
+// ----------------
+// 11- les boucles
+// ----------------
+document.write("<h2> Les boucles </h2>")
+/* Les boucles sont destinées à répéter des lignes de codes de façon automatique. */
+
+/* While :  */
+var i = 0; /* on initialise une variable à 0 pour compter le nombre de tourn de boucle */
+
+while (i<=5){/* ici entre parenthèse se situe la condition d'entrée dans la boucle while. Elle signifie "tant que i est inférieur ou égal à 5" */
+    document.write( i + "----");
+    i++;/* on incrémente i de +1. On n'oublier pas d'incrémenter pour ne aps crée une boucle infinie */
+}
+
+// Exercise : sans modifier la condition de la boucle while précédente, vous la compléter pour ne pas afficher les "---" après le 5.
+var i = 0;
+while (i<=5){
+    if(i<5){
+        document.write(i + "----");
+    } else  {
+        document.write(i);
+    }
+    i++;
+}
