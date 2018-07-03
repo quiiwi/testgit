@@ -365,9 +365,9 @@ while (i<=5){/* ici entre parenthèse se situe la condition d'entrée dans la bo
     document.write( i + "----");
     i++;/* on incrémente i de +1. On n'oublier pas d'incrémenter pour ne aps crée une boucle infinie */
 }
-
+document.write("<hr>");
 // Exercise : sans modifier la condition de la boucle while précédente, vous la compléter pour ne pas afficher les "---" après le 5.
-var i = 0;
+var i = 0;/* on n'oublie pas de réinitialiser i sinon il conserve la valeur 6 de la boucle précédente */
 
 while (i<=5){
 
@@ -381,7 +381,7 @@ while (i<=5){
     }
     i++;
 }
-
+document.write("<hr>");
 var i=0;
 while (i<=5){
     switch(i){
@@ -411,7 +411,7 @@ while (i<=5){
     }
     i++;
 }
-
+document.write("<hr>");
 var i = 0;
     if (i===0){
         document.write(i + "----");
@@ -441,3 +441,91 @@ var i = 0;
             }
         }
     }
+document.write("<hr>");
+// ----------------
+// La boucle for :
+// La boucle for est une autre syntaxe de la boucle while:
+for(var i = 0; i<=5 ; i++){/* on met dans les () du for : initialisation de la variable suivi d'un ";" ouis la condition d'entrée dans la boucle suivie d'un ";" puis l'incrementation (ou décrementation...) Non suivie d'un ";" (l'incrementation se fait à la fin de la boucle !) */
+    if (i<5){
+
+        document.write(i + "----");
+
+    } else  {
+
+        document.write(i);
+    }
+}
+
+document.write("<hr>");
+
+// -------------------
+// Exercice : afficher un menu déroulant avec les années de 1900 à 2020:
+document.write("<select>");
+    document.write("<option>1900</option>");
+    document.write("<option>...</option>");
+    document.write("<option>2020</option>");
+document.write("</select>");
+
+document.write("<hr>");
+
+var foucheD_Annees = 1200
+
+document.write("<select>");
+    for(var i=0 ; i<=foucheD_Annees; i++){
+        document.write("<option>" + (i + 1900));
+        document.write("</option>");
+    }
+document.write("</select>");
+
+
+
+document.write("<hr>");
+
+
+document.write("<select>");
+    for(var i=1900 ; i<=2020; i++){
+        document.write("<option>" + i + "</option>");
+    }
+document.write("</select>");
+
+
+
+// IMPORTANT ---------
+// IMPORTANT ---------
+// IMPORTANT ---------
+// IMPORTANT ---------
+/* Alternative : */
+var affichage = ''; /* pour contenir toutes les ablises HTML à venir */
+
+affichage += "<select>";
+    for(var i=1900 ; i<=2020; i++){
+        affichage += "<option>" + i + "</option>";
+    }
+affichage += "</select>";
+
+document.write(affichage);/* on affiche tout le string qui contient l'ensemble des balises du selecteur. */
+
+// la boucle do....while existe aussi. Elle a la particularité de s'éxécuter au moins une fois (correspond au "do"), puis seulement à la fin on regarde la condition du while pour savoir si on retroune dans la boucle ou pas. Exeple d'utilisation : vous posez une question obligatoire à l'internaute ("do"), puis tant qu'il n'a pas correctement répondu ("while"), vous lui reposez la question.
+
+// -------------------
+// 12- Les fonctions utilisateur
+// -------------------
+document.write("<h2> Les fonctions utilisateurs </h2>");
+// des fonctions sont des morceaux de codes encapsulés dans les accolades et portant in nom. Ellle sont appelées (par leur nom) quand on a besoin d'exécuter tout le code qui s'y trouve.Il est d'usage de faire des fonctions simples qui réalisent des actions unitaires.
+// A chaque fois qu'on répète une action, voir s'il n'est pas possible de la mettre dans une foction : cela s'appelle factoriser son code.
+
+// il existe 2 façon de déclarer une fonction en JS:
+// 1° Avec le mot clé function:
+function maFonction() {
+    // ici tout votre code 
+    document.write("<p>Nous avons une journée ensoleillée</p>");
+}
+// 2°Avec le mot clé var:
+var maFonction2 = function (){
+    // ici tout votre code
+    document.write("<p> Nous avons une chaude journée</p>");
+}
+
+// Pour qu'une fonction s'exécute, il fait l'appeler :
+maFonction(); //on appelle une foction en écrivant son nom suivi d'un paire de parenthèses
+maFonction2(); //en appelant cette fonction, j'éxécute le code qui s'y trouve
