@@ -266,10 +266,11 @@ Si la réponse est vide (On compare avec des quotes vides Sans espace), on affic
 Si la réponse n'est pas un nombre, on affiche "Vous n'avez pas indiqué un nombre."
 Si la réponse est correcte, on affiche "Vous avez indiqué avoir X and." ou X est l'âge donnée par l'internaute.
 */
+var annee = 2018
 
-var ageDeL_Utilisateur = prompt("Vous avez quel âge");
+var ageDeL_Utilisateur = prompt("Vous avez quel âge ?");
 
-if (ageDeL_Utilisateur == '' ){
+if (ageDeL_Utilisateur == ''  ){
 
     document.write("Vous n'avez pas répondu.");
 
@@ -279,6 +280,47 @@ if (ageDeL_Utilisateur == '' ){
 
 } else {
 
-    document.write("Vous avez indiqué avoir " + ageDeL_Utilisateur + " ans.");
+    document.write("Vous êtes née en " + (ageDeL_Utilisateur - annee));
 
 }
+
+// --------------
+// 9- Synthèse des opérateurs
+// --------------
+document.write("<h2> Synthèse des opérateurs </h2>");
+
+// Pour tester des variables entre-elles :
+/* 
+    == pour égal en valeur
+    !=pour différent de en valeur 
+
+    === pour strictement égal en valeur ET en tyoe
+    !== pour strictement différent en valeur OU en type
+
+    > pour plus grand que
+    < pour plus petit que
+    >= pour supérieur ou égal
+    <= pour inférieur ou égal
+ */
+
+// Les opérateur logiques :
+/* 
+    && pour AND
+    || pour OR
+    ! pourNOT (négation)
+
+    Les opérations effectuées avec les opérateurs logique ne donnent que 2 résultats possibles : TRUE ou FALSE.
+
+    Exemples :
+        true && true => true
+        true && false => false
+        false && false => false
+
+        true || true => true
+        true || false => true
+        false || true => false
+
+        !TRUE => false
+        !FALSE => true
+
+*/
