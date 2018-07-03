@@ -368,11 +368,76 @@ while (i<=5){/* ici entre parenthèse se situe la condition d'entrée dans la bo
 
 // Exercise : sans modifier la condition de la boucle while précédente, vous la compléter pour ne pas afficher les "---" après le 5.
 var i = 0;
+
 while (i<=5){
-    if(i<5){
+
+    if (i<5){
+
         document.write(i + "----");
+
     } else  {
+
         document.write(i);
     }
     i++;
 }
+
+var i=0;
+while (i<=5){
+    switch(i){
+        case 0:
+            document.write(i + "----");
+        break;
+
+        case 1:
+            document.write(i + "----");
+        break;
+
+        case 2:
+            document.write(i + "----");
+        break;
+
+        case 3:
+            document.write(i + "----");
+        break;
+
+        case 4:
+            document.write(i + "----");
+        break;
+
+        default:
+        document.write(i);
+
+    }
+    i++;
+}
+
+var i = 0;
+    if (i===0){
+        document.write(i + "----");
+        i++;
+
+        if (i===1){
+            document.write(i + "----");
+            i++;
+
+            if (i===2){
+                document.write(i + "----");
+                i++;
+
+                if (i===3){
+                    document.write(i + "----");
+                    i++;
+
+                    if (i===4){
+                        document.write(i + "----");
+                        i++;
+
+                        if (i===5){
+                            document.write(i);
+                        }
+                    }
+                }
+            }
+        }
+    }
