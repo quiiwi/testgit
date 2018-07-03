@@ -217,3 +217,68 @@ if( varA === varB){
 } else{
     document.write("Différence en valeur OU en type <br>");
 }
+
+// -------------------------
+// -------------------------
+// -------Jour -2-----------
+// -------------------------
+// -------------------------
+
+// Condition dite ternaire :
+// La condition ternaire est une autre syntaxe de la condition if....else.
+
+var voiture = "bmw";
+
+var origine = (voiture === "bmw") ? "origine allemande <br>" : "autre origine <br>";
+//  La condition ternaire s'écrit avec un "?" qui remplace le if, et un ":" qui remplace le else.
+document.write(origine);
+
+// ------------
+// isNaN : is Not a Number
+// NaN pour Not a Number est une valeur utilisée pour représenter une "quantité" qui n'est pas un nombre en JavaScript.
+
+console.log(2 * "azerty");
+
+// Les opérateurs d'égalité (== ou ===) ne peuvent pas être utilisés pour tester si une valeur est Nan. Il faut utiliser isNan() :
+
+var annee = "2018"; // string
+if ( isNaN(annee) ) {
+    /* condition fausse car "2018" après conversion est bien un number. On entre donc dans le else */
+    document.write("Ce n'est pas un number après conversion <br>");
+} else {
+    document.write("C'est un number après conversion <br>");
+}
+
+// Le contaire :
+
+var annee = "juin 2018"; // string
+if ( isNaN(annee) ) {
+    /* ici la condition est vraie. On entre donc ici : */
+    document.write("Ce n'est pas un number après conversion <br>");
+} else {
+    document.write("C'est un number après conversion <br>");
+}
+
+// -----------
+// Exercice :
+/* Demandez l'âge de l'internaute dans un prompt.
+Si la réponse est vide (On compare avec des quotes vides Sans espace), on affiche "Vous n'avez pas répondu."
+Si la réponse n'est pas un nombre, on affiche "Vous n'avez pas indiqué un nombre."
+Si la réponse est correcte, on affiche "Vous avez indiqué avoir X and." ou X est l'âge donnée par l'internaute.
+*/
+
+var ageDeL_Utilisateur = prompt("Vous avez quel âge");
+
+if (ageDeL_Utilisateur == '' ){
+
+    document.write("Vous n'avez pas répondu.");
+
+} else if ( isNaN (ageDeL_Utilisateur) ){
+
+    document.write("Vous n'avez pas indiqué un nombre.");
+
+} else {
+
+    document.write("Vous avez indiqué avoir " + ageDeL_Utilisateur + " ans.");
+
+}
