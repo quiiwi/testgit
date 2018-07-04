@@ -568,14 +568,14 @@ meteo('printemps');
 
 // Exercice : réécrivez la fonction précèdente dans une fonction exeMeteo, et complétez la pour qu'elle affiche "au printemps", "en été", "en automne" ou "en hiver". Dans cet exercice, vous ne modifiez pas le paramètre saison et vous n'en ajoutez pas.
 
-var x ='';
+
 
 function p(param){
     document.write('nous sommes ' + param  + '.' + '<br>')
 }
 
 function exeMeteo(saison){
-
+    var x ='';
 
     if (saison === 'été' || saison === 'hiver' || saison === 'automn'){
         x = 'en ';
@@ -674,3 +674,25 @@ d(oiseau);/* aigle car on utilise la première variable globl disponible qui vau
 d(ciel());/* faucon grâce au retaurn de la fonction. mais en exécutant celle-ci on a changé le contenu de la variable globale pour y mettre faucun! */
 d(oiseau);/* en conséquence la variable oiseau contient désormais Faucon */
 
+
+// ------------------
+// 14- Les arrays
+// ------------------
+
+
+document.write('<h2> Les arrays </h2>');
+/*  un array, ou tableau en français, est un objet qui contient plusieurs valeurs, appeléss items ou élément. chaque élément est accessible au moyen d'un indice (ou idnex) dont la numérotation commence à partir de 0. */
+
+// Déclaration d'un array :
+var monTableau =['Emilie','Magalie','Zakir','Elric',96];/* déclaration d'un array qui contient des string et un number(version conventionnelle la plus utilisée). Chaque élément à un indice : Emilie le 0, Magalie le 1, et ainsi de suite.*/
+
+/* accéder à un élément de l'array : */
+d(monTableau[0]); /* affiche l'élément de valeur Emilie. */
+
+/* Remplacer la valeur "Elric" par la valeur "Alphonse" */
+monTableau[3]= 'Alphonse'; /* on modifie la valeur positionnée à l'indice 3 pour y mettre Alphonse */
+
+d(monTableau[3]);
+
+/* Mesurer le nombre d'éléments d'un array : */
+d(monTableau.length);
