@@ -719,9 +719,9 @@ document.write(deuxDimensions[0][2] + ' et des ' + deuxDimensions[1][1]); /* aff
 // ---------------
 // exercice : créer un  array avec les tailles S,M,L et XL. A l'aide d'une boucle for, afficher un menu déroulant avec les tailleds provenant de l'array, à l'intérieur.
 
-document.write('<hr>')
+document.write('<hr>');
 
-var tailleVetement = ['S' , 'M' , 'L' , 'XL', 'XXL' ];
+var tailleVetement = ['S' , 'M' , 'L' , 'XL' ];
 
 
 d("<select>");
@@ -732,7 +732,7 @@ d("</select>");
 
 // ------------------------------------------------
 
-var tailleVetement2 = ['S' , 'M' , 'L' , 'XL', 'XXL' ], affichages ='';
+var tailleVetement2 = ['S' , 'M' , 'L' , 'XL' ], affichages ='';
 
 affichages += "<select>";
     for(var y=0 ; y < tailleVetement2.length; y++){
@@ -740,4 +740,60 @@ affichages += "<select>";
     }
 affichages += "</select>";
 
-d(affichages)
+d(affichages);
+
+// --------
+// -ajouter ou supprimer des valeurs au début ou à la fin d'un array:
+
+tailleVetement2.push('XXL'); //ajoute "XXL" à la fin de l'array tailleVetement2
+console.log(tailleVetement2);
+
+tailleVetement2.unshift('XS');/* ajoute "XS" au début de l'array taillesVetement2 */
+console.log(tailleVetement2);
+
+/* le contraire de push, c'est pop */
+tailleVetement2.pop();/* supprime le dernier élément de l'array tailleVetement2 */
+console.log(tailleVetement2);
+
+/* le contraire de unshift, c'est shif */
+tailleVetement2.shift()/* supprime le premier élément de l'array tailleVetement2 */
+console.log(tailleVetement2);
+
+
+// ------------------
+// 14- Les objets
+// ------------------
+
+
+document.write('<h2> Les objets </h2>');
+
+/* Un objet est un ensemble de propriétés qui correspondent à l'association d'un nom et d'une valeur, cette valeur peut-être de n'importe quel type (string, number,booléen,arrar,objet...). 
+
+De plus, la valeur de la propriété peut-être une fonction. Dans ce cas cette propriété s'appelle une méthode (il s'agit simplement d'une fonction dans un objet).
+
+Les propriétés et les méthodes d'un objet s'appelle les "membre" de cet objet.
+
+*/
+
+/* création d'un objet */
+var personnage = {
+    nom : 'Tintin', /* paire "propriété : valeur" suivie d'une "," */
+    animal : 'chien',
+    amis : ['Haddock', 'Tournesol','Dupont & Dupond'],
+    age : 35 /* par convention pas de "," au denrier élément  */
+}; /* on termine bien l'instruction avec un ";" */
+
+/* Accéder à la valeur d'une propriété d'un objet : */
+d(personnage.nom); /* affiche Tintin. on accède à une propriété d'un objet en écrivant le nom de l'ibjet puis un "." puis la proriété.*/
+
+d(personnage['nom']);/* affiche aussi Tintin. on peut aussi utiliser la notation entre []  pour accerder a une propriété d'une objet. */
+
+// remplissage d'une propriété :
+personnage.animal = 'Milou';
+d(personnage.animal);
+// ou encore :
+personnage['animal'] = 'Milou';
+
+// Pour afficher Tournesol :
+d(personnage.amis[1]);
+d(personnage['amis'][1]);
