@@ -695,4 +695,49 @@ monTableau[3]= 'Alphonse'; /* on modifie la valeur positionnée à l'indice 3 po
 d(monTableau[3]);
 
 /* Mesurer le nombre d'éléments d'un array : */
-d(monTableau.length);
+d(monTableau.length); /* affiche 5 correspondant aux nombres d'éléments du tableau */
+
+/* Parcourir un array avec une boucle for ! */
+
+for(var i= 0; i< monTableau.length; i++){
+    d(monTableau[i]);/* la variable i prends succssivement les valeurs de 0 à 4 inclus. monTableau[i] permet donc de parcourir chaque indice du 0 au 4. */
+}
+
+// ----------
+// Array multidimensionnel :
+//Un array multidimensionnel est un tableau qui contient un ou plusieurs autres tableaux.
+
+var deuxDimensions = [ 
+     ['fraises', 'pommes', "bananes"],
+     ['tomates','carottes','courgettes'] 
+    ];
+
+d(deuxDimensions[0][2]); /* pour accéder à la valeur "bananes", je vais d'abord à l'indice 0 du tableau deuxDimentions, puis à l'intérieur je vais à l'indice 2 */
+
+document.write(deuxDimensions[0][2] + ' et des ' + deuxDimensions[1][1]); /* affiche banaes suivi de carottes */
+
+// ---------------
+// exercice : créer un  array avec les tailles S,M,L et XL. A l'aide d'une boucle for, afficher un menu déroulant avec les tailleds provenant de l'array, à l'intérieur.
+
+document.write('<hr>')
+
+var tailleVetement = ['S' , 'M' , 'L' , 'XL', 'XXL' ];
+
+
+d("<select>");
+    for(var y=0 ; y < tailleVetement.length; y++){
+        d("<option>" + tailleVetement[y] + "</option>");
+    }
+d("</select>");
+
+// ------------------------------------------------
+
+var tailleVetement2 = ['S' , 'M' , 'L' , 'XL', 'XXL' ], affichages ='';
+
+affichages += "<select>";
+    for(var y=0 ; y < tailleVetement2.length; y++){
+        affichages += "<option>" + tailleVetement2[y] + "</option>";
+    }
+affichages += "</select>";
+
+d(affichages)
