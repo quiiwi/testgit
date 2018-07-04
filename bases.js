@@ -352,9 +352,12 @@ switch (couleur){
     break;
 }
 
+
 // ----------------
 // 11- les boucles
 // ----------------
+
+
 document.write("<h2> Les boucles </h2>")
 /* Les boucles sont destinées à répéter des lignes de codes de façon automatique. */
 
@@ -486,14 +489,14 @@ document.write("<select>");
     for(var i=1900 ; i<=2020; i++){
         document.write("<option>" + i + "</option>");
     }
-document.write("</select>");
+document.write("</select>" + "<hr>");
 
 
 
-// IMPORTANT ---------
-// IMPORTANT ---------
-// IMPORTANT ---------
-// IMPORTANT ---------
+// IMPORTANT ---------!!!!!
+// IMPORTANT ---------!!!!!
+// IMPORTANT ---------!!!!!
+// IMPORTANT ---------!!!!!
 /* Alternative : */
 var affichage = ''; /* pour contenir toutes les ablises HTML à venir */
 
@@ -507,9 +510,12 @@ document.write(affichage);/* on affiche tout le string qui contient l'ensemble d
 
 // la boucle do....while existe aussi. Elle a la particularité de s'éxécuter au moins une fois (correspond au "do"), puis seulement à la fin on regarde la condition du while pour savoir si on retroune dans la boucle ou pas. Exeple d'utilisation : vous posez une question obligatoire à l'internaute ("do"), puis tant qu'il n'a pas correctement répondu ("while"), vous lui reposez la question.
 
+
 // -------------------
 // 12- Les fonctions utilisateur
 // -------------------
+
+
 document.write("<h2> Les fonctions utilisateurs </h2>");
 // des fonctions sont des morceaux de codes encapsulés dans les accolades et portant in nom. Ellle sont appelées (par leur nom) quand on a besoin d'exécuter tout le code qui s'y trouve.Il est d'usage de faire des fonctions simples qui réalisent des actions unitaires.
 // A chaque fois qu'on répète une action, voir s'il n'est pas possible de la mettre dans une foction : cela s'appelle factoriser son code.
@@ -550,3 +556,121 @@ d("test de notre fonction");
 d("yolo");
 d(4+2);
 d('<div class="test">Test de notre fonction</div>');
+
+// ------------
+// Préambule à l'exercice :
+function meteo(saison){
+    d("nous sommes en " + saison + '.'); /* nous avons la possibilité d'utiliser une autre fonction, ici d(), dans les instructions de cette fontion */
+}
+
+meteo("été");
+meteo('printemps');
+
+// Exercice : réécrivez la fonction précèdente dans une fonction exeMeteo, et complétez la pour qu'elle affiche "au printemps", "en été", "en automne" ou "en hiver". Dans cet exercice, vous ne modifiez pas le paramètre saison et vous n'en ajoutez pas.
+
+var x ='';
+
+function p(param){
+    document.write('nous sommes ' + param  + '.' + '<br>')
+}
+
+function exeMeteo(saison){
+
+
+    if (saison === 'été' || saison === 'hiver' || saison === 'automn'){
+        x = 'en ';
+    } else {
+        x = 'au ';
+    }
+    p(x + saison);
+    
+}
+
+exeMeteo('été');
+exeMeteo('hiver');
+exeMeteo('automn');
+exeMeteo('printemps');
+
+
+// --------------
+// Le mot clé "return" qui permet de sortir une valeur d'une fonction :
+
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+
+function somme(a ,b){
+    var resultat = a + b;
+    return resultat;/* return permet de SORTIR la valeur de resultat de la fonction : il retourne cette valeur à l'endroit où la fonction est appelée */
+}
+
+d(' La somme de 2 + 4 est égale à ' + somme(2 , 4));/* on récupère ici la valeur 6 de résultat grâce au return qui se trouve dans la fonction somme() */
+
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+
+function somme2(a ,b){
+    return a + b;
+
+}
+
+d(' La somme de 2 + 4 est égale à ' + somme2(2 , 4));
+
+
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+
+function somme3(a ,b){
+    var resultat = a + b;
+    d(' La somme de 2 + 4 est égale à ' + resultat);
+}
+
+somme3(2,4);
+
+
+// --------------------------
+// 13- La porté des variables
+// --------------------------
+
+
+document.write('<h2> La portée des variables </h2>');
+
+/* Selon l'endroit et la façon dont une variable est déclarée, elle pourra être accessible partout dans le script ou uniquement dans une portion limitée du code des fonctions. On parle de portée des variables (scope en anglais).
+
+-Une variable déclarée SANS le mot clé var (façon implicite): elle st accessible PARTOUT dans le script, y compris au sein des fonctions / elle est dite GLOBALE.
+
+-Une variable déclarée AVEC le mot clé var (façon explicite): 
+    -à l'éxtérieur d'une fonction elle sera GLOBALE, donc accessible partout dans le script, y compris au sein des fonctions
+    -à l'intérieur d'une fonction elle sera LOCALE, donc accessible uniquement DANS cette fonction.
+
+*/
+
+var animal = 'loup';/* globale */
+function jungle(){
+    var animal = 'tigre';/* locale */
+    return animal;
+}
+d(animal);/* loup car on est dans l'espace global et qu'on utilise la variable globale disponible qui vaut loup */
+d(jungle());/* tigre  grâce au return qui se trouve à la fin de la fonction: il sort la valeur Tigre de la variable Locale à la fonction*/
+d(animal);/* loup Loup pour les mêmes raisons que le premier*/
+
+// ----------
+d('<hr>');
+
+var oiseau = 'Aigle'; /* global */
+function ciel(){
+    oiseau = 'Faucon'; /* global */
+    return oiseau;
+}
+d(oiseau);/* aigle car on utilise la première variable globl disponible qui vaut Aigle */
+d(ciel());/* faucon grâce au retaurn de la fonction. mais en exécutant celle-ci on a changé le contenu de la variable globale pour y mettre faucun! */
+d(oiseau);/* en conséquence la variable oiseau contient désormais Faucon */
+
