@@ -795,5 +795,27 @@ d(personnage.animal);
 personnage['animal'] = 'Milou';
 
 // Pour afficher Tournesol :
-d(personnage.amis[1]);
-d(personnage['amis'][1]);
+d(personnage.amis[1]);/* pour accéder à "Tournesol", on va à la propriété "amis" de personnage avec un "." puis on va à l'indice [1] du tableau qui s'y trouve */
+d(personnage['amis'][1]);/* de la même manière qu'avec Milou, je peux utiliser la notation entre [] pour accéder à la propriété "amis"  */
+
+// --------------------
+// création d'un objet avec une méthode :
+var maVoiture = {
+    marque : 'Mercedes',
+    couleur : 'noire',
+    motorisation : {
+        energie : 'diesel',
+        puissance : '110CV',
+        garentie : true
+    },
+    afficherOrigine : function (){ /* afficherOrigine est une méthode de maVoiture */
+        document.write('origine allemande <br>');
+    }
+};
+
+/* on identifie les méthodes au mot clé function qui permet d'y mettre le code qu'elle doit exécuter (tout comme un fonction). */
+d(maVoiture.marque); /* affiche Mercedes */
+d(maVoiture.couleur); /* affiche noire */
+maVoiture.afficherOrigine(); /* appel de la méthode afficherOrigine() de l'objet ma voiture écrite avec sa paire de (). Affiche "origine allemande" */
+d(maVoiture.motorisation['energie']);
+d(maVoiture.motorisation.energie); /* ces 2 syntaxes pour accéder à la propriété energie qui se situe dans la proriété motorisation de l'objet maVoiture. Affiche diesel */
