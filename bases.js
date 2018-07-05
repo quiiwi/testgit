@@ -761,7 +761,7 @@ console.log(tailleVetement2);
 
 
 // ------------------
-// 14- Les objets
+// 15- Les objets
 // ------------------
 
 
@@ -819,3 +819,63 @@ d(maVoiture.couleur); /* affiche noire */
 maVoiture.afficherOrigine(); /* appel de la méthode afficherOrigine() de l'objet ma voiture écrite avec sa paire de (). Affiche "origine allemande" */
 d(maVoiture.motorisation['energie']);
 d(maVoiture.motorisation.energie); /* ces 2 syntaxes pour accéder à la propriété energie qui se situe dans la proriété motorisation de l'objet maVoiture. Affiche diesel */
+
+// ----------------------
+// La boucle for in:
+// La boucle for....in permet de parcourir les objets et de récupérer tous les membres(informations) qui y sont contenus.
+
+d('<hr>')
+
+// pour l'exemple, nous allos parcourir l'objet qui s'appelle maVoiture.motorisation :
+for(var membre in maVoiture.motorisation) {
+    d(membre + ' a pour valeur ' + maVoiture.motorisation[membre]);
+} /* membre s'appelle un "référent" : c'est ça place dans la syntaxe du for...in qui détermine que "membre" récupère le nom des propriétés à chaque tour de boucle. Ainsi maVoiture.motorisation[membre] permet de récupérer la valeur correspondante à la propriétécontenue dans "membre". Note : on ne met pas de quote à membre dans les [] car il s'agit d'une variable.
+ */
+
+// ------------------
+// 16- propriété et méthodes de l'objet string
+// ------------------
+
+document.write('<h2> Propriété et méthodes de l\'objet string </h2>');
+
+/* propriété length */
+animal ='loup';
+d(animal.length); /* affiche 4 soit le nombre de caractères du string contenu dans la variable animal */
+
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+// IMPORTANT-----------------------!!!
+
+
+// méthode trim():
+var adresse = '        16 rue de Seine               ';
+d('adresse avec les espaces : ' + adresse.length);/* longueur y comprus les espaces */
+d('adresse sans les espaces : ' + adresse.trim().length);/* la méthode trim() supprime les espaces end ébut et en fin de chapine (utile pour nettoyer les données d'un formulaire) */
+
+/* Notez qu'une méthode comporte toujours des () */
+
+var adresse = '        16 rue de Seine               ';
+for(var i=0;i< adresse.length;i++){
+    document.write(adresse[i]);
+}
+
+// -----------------------------------------
+// Trouver des ressources sur le net.
+// Le site de référence du JS : MDN
+// https://developer.mozilla.org/
+
+// Pour aller plus loin :
+// openclassroom.com
+// codecademy.com cours,forum,exercices
